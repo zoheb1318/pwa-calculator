@@ -24,7 +24,8 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json"
             ],
             "styles": [
               "src/styles.scss"
@@ -55,7 +56,9 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "src/ngsw-config.json"
             }
           }
         },
@@ -89,7 +92,8 @@
             "scripts": [],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json"
             ]
           }
         },
@@ -104,6 +108,10 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
@@ -136,5 +144,8 @@
       }
     }
   },
-  "defaultProject": "pwa-calculator"
+  "defaultProject": "pwa-calculator",
+  "cli": {
+    "analytics": "e29b5483-4e24-4661-ade1-a4c0b28b33b4"
+  }
 }

@@ -1,0 +1,34 @@
+<div class="calculator">
+  <p id="brand">CASIO</p>
+  <p id="title">electronic calculator</p>
+  <input type="text" disabled="disabled" id="answer" [(ngModel)]="calculatedValue" />
+  <div class="row">
+    <button (click)="buttonClicked('AC')" class="clear-button">AC</button>
+    <button (click)="buttonClicked('CE')" class="clear-button">CE</button>
+    <button (click)="buttonClicked('%')">%</button>
+    <button (click)="buttonClicked('÷')">÷</button>
+  </div>
+  <div class="row">
+    <button (click)="buttonClicked('7')">7</button>
+    <button (click)="buttonClicked('8')">8</button>
+    <button (click)="buttonClicked('9')">9</button>
+    <button (click)="buttonClicked('x')">x</button>
+  </div>
+  <div class="row">
+    <button (click)="buttonClicked('4')">4</button>
+    <button (click)="buttonClicked('5')">5</button>
+    <button (click)="buttonClicked('6')">6</button>
+    <button (click)="buttonClicked('-')">-</button>
+  </div>
+  <div class="row">
+    <button (click)="buttonClicked('1')">1</button>
+    <button (click)="buttonClicked('2')">2</button>
+    <button (click)="buttonClicked('3')">3</button>
+    <button (click)="buttonClicked('+')" class="tall-button">+</button>
+  </div>
+  <div class="row">
+    <button (click)="buttonClicked('0')">0</button>
+    <button (click)="buttonClicked('.')">.</button>
+    <button (click)="buttonClicked('=')">=</button>
+  </div>
+</div>
